@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>贵州高投高速大数据</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=q3OZttc8qOGDG9anCTYRIOmXpHrnT96u"></script>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/echarts/dist/echarts.js"></script>
+    <script src="./node_modules/echarts/dist/extension/bmap.js"></script>
+    <script src="./node_modules/popper.js/dist/popper.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="header">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="header-title">
+                    <h5 class="header-title-h4">
+                        <span class="header-title-box1"></span>
+                        <span class="header-title-box2"></span>
+                        <span>贵州高投高速大数据</span>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 main-left " >
+                <div class="left-people">
+                    <h6>2018-05-24 09:33:35 今日车辆流动数量</h6>
+                    <div class="left-people-amount">
+                        <h3>
+                            <span>0</span>
+                            <span>0</span>
+                            <span>0</span>
+                            <span>0</span>
+                            <span>7</span>
+                            <span>8</span>
+                            <small style="font-size: 14px">辆</small>
+                        </h3>
+                    </div>
+                    <div class="left-people-number">
+                        <span style="margin-right: 10px">前日时间同比</span>
+                        <i class="fa fa-long-arrow-up"></i>
+                        <span class="text-warning">3.2%</span>
+                    </div>
+                </div>
+                <div class="left-accumulation" id="accumulation_echart"></div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 main-center">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="center-top">
+                            <div id="center_map"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="center-bottom-left">
+                            <div class="right-center">
+                                <!-- <p>流动人口来源地分布</p>
+                                 <p class="p1">
+                                     <span style="color: #A4324B;font-size: 16px;">六安</span>
+                                     <span style="color: #843699;font-size: 14px;">宿州</span>
+                                     <span style="color: #224472;">菏泽</span>
+                                 </p>
+                                 <p class="p2">
+                                     <span style="color: #802E83;font-size: 14px;">淮北</span>
+                                     <span style="color: #ECE59F;font-size: 20px;">安徽</span>
+                                     <span style="color: #4F92AF;font-size: 14px;">蚌埠</span>
+                                     <span style="color: #B7214F;font-size: 18px;">芜湖</span>
+                                 </p>
+                                 <p class="p3">
+                                     <span style="color: #3A90A7;font-size: 13px;">扬州</span>
+                                     <span style="color: #EFEAAA;font-size: 20px;">亳州</span>
+                                     <span style="color: #8B3A1F;font-size: 18px;">滁州</span>
+                                     <span style="color: #EEE89E;font-size: 22px;">周口</span>
+                                     <span style="color: #18649E;font-size: 12px;">无锡</span>
+                                 </p>
+                                 <p class="p4">
+                                     <span style="color: #154889;font-size: 12px;">徐州</span>
+                                     <span style="color: #0A2B70;font-size: 12px;">枣庄</span>
+                                     <span style="color: #AD5DBE;font-size: 16px;">淮南</span>
+                                     <span style="color: #448EB1;font-size: 13px;">连云港</span>
+                                 </p>-->
+                                <table class="table" style="border: none">
+                                    <thead >
+                                    <tr style="border: none">
+                                        <th>产生时间</th>
+                                        <th>事件类型</th>
+                                        <th>负责人</th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                                <div class="center-bottom-left-table">
+                                    <div class="center-bottom-left-box">
+                                        <table class="table">
+                                            <tbody>
+                                            <tr>
+                                                <td style="color: deepskyblue">07：33：45</td>
+                                                <td class="text-danger">化粪池堵塞</td>
+                                                <td style="color: #FFFF26">黄磊</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="color: deepskyblue">08：45：12</td>
+                                                <td class="text-danger">广场卫生清理</td>
+                                                <td style="color: #FFFF26">李秀</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="color: deepskyblue">09：45：12</td>
+                                                <td class="text-danger">办公室监控失效</td>
+                                                <td style="color: #FFFF26">王峰</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="color: deepskyblue">10：47：58</td>
+                                                <td class="text-danger">厨房漏水</td>
+                                                <td style="color: #FFFF26">李宁</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="center-bottom-left-scroll">
+                                        <div class="center-bottom-left-scroll-bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="center-bottom-right" id="religion_echart"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 main-right">
+                <div class="right-top" id="histogram_echarts" style="color: white">
+                    <h6 class="text-center" style="margin-top: 2vh">高速服务区天气监控</h6>
+                    <iframe width="100%" scrolling="no"
+                            height="100%" frameborder="0" allowtransparency="true"
+                            src="http://i.tianqi.com/index.php?c=code&id=2&color=%23FFFFFF&icon=4&num=2&site=12">
+
+                    </iframe>
+                </div>
+                <div class="right-center">
+                   <!-- <p>流动人口来源地分布</p>
+                    <p class="p1">
+                        <span style="color: #A4324B;font-size: 16px;">六安</span>
+                        <span style="color: #843699;font-size: 14px;">宿州</span>
+                        <span style="color: #224472;">菏泽</span>
+                    </p>
+                    <p class="p2">
+                        <span style="color: #802E83;font-size: 14px;">淮北</span>
+                        <span style="color: #ECE59F;font-size: 20px;">安徽</span>
+                        <span style="color: #4F92AF;font-size: 14px;">蚌埠</span>
+                        <span style="color: #B7214F;font-size: 18px;">芜湖</span>
+                    </p>
+                    <p class="p3">
+                        <span style="color: #3A90A7;font-size: 13px;">扬州</span>
+                        <span style="color: #EFEAAA;font-size: 20px;">亳州</span>
+                        <span style="color: #8B3A1F;font-size: 18px;">滁州</span>
+                        <span style="color: #EEE89E;font-size: 22px;">周口</span>
+                        <span style="color: #18649E;font-size: 12px;">无锡</span>
+                    </p>
+                    <p class="p4">
+                        <span style="color: #154889;font-size: 12px;">徐州</span>
+                        <span style="color: #0A2B70;font-size: 12px;">枣庄</span>
+                        <span style="color: #AD5DBE;font-size: 16px;">淮南</span>
+                        <span style="color: #448EB1;font-size: 13px;">连云港</span>
+                    </p>-->
+                    <p style="margin-left: 5px">液态交易数据监控</p>
+                    <table class="table" style="border: none">
+                        <thead >
+                        <tr style="border: none">
+                            <th>交易时间</th>
+                            <th>交易金额</th>
+                            <th>交易地点</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <div class="right-center-table">
+                        <div class="content-box">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td style="color: deepskyblue">07：33：45</td>
+                                    <td style="color: mediumvioletred">1128.5元</td>
+                                    <td style="color: #FFFF26">服务区1号店</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: deepskyblue">08：45：12</td>
+                                    <td style="color: mediumvioletred">118.5元</td>
+                                    <td style="color: #FFFF26">服务区2号店</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: deepskyblue">09：45：12</td>
+                                    <td style="color: mediumvioletred">3128.5元</td>
+                                    <td style="color: #FFFF26">服务区3号店</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: deepskyblue">10：47：58</td>
+                                    <td style="color: mediumvioletred">188.5元</td>
+                                    <td style="color: #FFFF26">服务区4号店</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: deepskyblue">11：05：58</td>
+                                    <td style="color: mediumvioletred">2128.5元</td>
+                                    <td style="color: #FFFF26">服务区5号店</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: deepskyblue">12：47：33</td>
+                                    <td style="color: mediumvioletred">218.5元</td>
+                                    <td style="color: #FFFF26">服务区6号店</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="scroll">
+                            <div class="scroll-bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-bottom" id="education_echart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src='./js/app.js'></script>
+<script src='./js/MyChart.js'></script>
+<script src='./js/centerMap.js'></script>
+<script src='./js/appMap.js'></script>
+<script src='./js/scroll.js'></script>
+<script src='./js/scroll1.js'></script>
+</html>

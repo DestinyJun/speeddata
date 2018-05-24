@@ -1,0 +1,223 @@
+/**
+ * Created by wangwenjun on 2018/2/22.
+ * project name ...
+ */
+body,html{
+    color: white;
+    background: #151A30;
+}
+.container-fluid{}
+/*头部*/
+.header{
+    height: 6vh;
+    border-bottom: 1px solid #404259;
+    padding-top: 10px;
+}
+.header-title{
+    position: relative;
+    text-align: center;
+}
+.header-title-h4{
+    margin-bottom: 0;
+    border-bottom: 1px solid #ADB9D1;
+    padding-bottom: 5px;
+}
+.header-title-box1{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #648ED6;
+}
+.header-title-box2{
+    display: inline-block;
+    margin-left: -7px;
+    width: 0;
+    height: 0;
+    border-top: 16px solid #648ED6;
+    border-right: 16px solid transparent;
+}
+.header-icon {
+    float: right;
+    overflow: hidden;
+
+}
+.header-icon-img{
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/*主体*/
+.main{
+    height: 93vh;
+    padding-top: 1vh;
+}
+
+/*主体左边*/
+.main-left{
+    padding-right: 0;
+}
+
+/*主体左边人口数*/
+.left-people{
+    height: 14vh;
+}
+.left-people-amount>h3>span{
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    border: 1px solid #7D8DA7;
+    line-height: 40px;
+    text-align: center;
+    background: -moz-linear-gradient(top, #01071D 0%, #0A4D84 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(100%,#01071D), color-stop(100%,#0A4D84));
+    background: -webkit-linear-gradient(top, #01071D 50%,#0A4D84 100%);
+    background: -o-linear-gradient(top, #01071D 0%,#0A4D84 100%);
+    background: -ms-linear-gradient(top, #01071D 0%,#0A4D84 100%);
+    background: linear-gradient(to bottom, #01071D 0%,#0A4D84 100%);
+}
+.left-people-number{
+    font-size: 12px;
+}
+/*主体左边社保折现图*/
+.left-accumulation{
+    margin-top: 1vh;
+    height: 76.3vh;
+    border:1px solid #3B425C;
+}
+/*主体左边流动人口饼图*/
+.left-income{
+    margin-top: 1vh;
+    height: 16vh;
+    border:1px solid #3B425C;
+    padding-top: 5px;
+}
+/*主体左边犯罪人口气泡图*/
+.left-crime{
+    margin-top: 1vh;
+    height: 29vh;
+    border:1px solid #3B425C;
+}
+
+/*主体中部*/
+.main-center{
+
+}
+.center-top{
+    padding: 1vh;
+    border:1px solid #3B425C;
+}
+#center_map{
+    height: 59vh;
+}
+/*主体中部下左*/
+.center-bottom-left{
+    margin-top: 1vh;
+    margin-right: -8px;
+    border:1px solid #3B425C;
+    height: 29vh;
+    font-size: 12px;
+    font-weight: normal;
+    overflow: hidden;
+}
+.center-bottom-left>p{
+    padding-top: 5px;
+}
+.center-bottom-left>p>span{
+    margin-right: 5px
+}
+.center-bottom-left>.p1,.p2,.p3,.p4,.p5{
+    text-align: center;
+    margin-bottom: 5px;
+}
+.center-bottom-left.p1{
+    padding-top: 15px;
+}
+/*主体中部下右*/
+.center-bottom-right{
+    margin-top: 1vh;
+    border:1px solid #3B425C;
+    height: 29vh;
+    margin-left: -8px;
+}
+
+/*主体右边*/
+.main-right{
+    padding-left: 0;
+}
+/*主体右边顶部*/
+.right-top{
+    margin-top: 1vh;
+    border:1px solid #3B425C;
+    height: 20vh;
+    font-size: 12px;
+}
+/*主体右边中部*/
+.right-center{
+    margin-top: 1vh;
+    border:1px solid #3B425C;
+    height: 39vh;
+    font-size: 12px;
+    overflow: hidden;
+}
+.right-center-table{
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.content-box{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+.scroll{
+    height: 100%;
+    width: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.scroll-bar{
+    width: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.right-center>p{
+    padding-top: 5px;
+}
+.right-center>p>span{
+    margin-right: 8px;
+    font-weight: 600;
+}
+.right-center>.p1,.p2,.p3,.p4,.p5{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.right-center.p1{
+    padding-top: 15px;
+}
+/*主体右边底部*/
+.right-bottom{
+    margin-top: 1vh;
+    border:1px solid #3B425C;
+    height: 29vh;
+}
+
+
+/*微调*/
+.text-warning{
+    margin-right: 10px;
+}
+/*字体图标*/
+.fa-long-arrow-up{
+    color: red;
+}
+
+/*百度地图*/
+.anchorBL{display:none;}
+
